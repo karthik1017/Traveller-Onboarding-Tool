@@ -1,0 +1,55 @@
+{%extends 'base.html'%}
+<head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<style type="text/css">
+    <title></title>
+</head>
+{%block body%}
+<form action="{% url 'users:visa' %}" method="post">
+    {% csrf_token %}
+    <div class="container">
+    <div class="row">
+
+    <div class="col-lg-4">
+<div class="well">
+    <div class="form-group">
+        <div class="input-group">
+    <label>Passport Number:</label>
+     <input type="text" name="pno" id="" class="form-control"><br><br>
+        </div>
+    </div>
+
+
+    <div class="form-group">
+        <div class="input-group">
+    <label>Application Number:</label>
+    <input type="text" name="apno" id="" class="form-control">
+    </div>
+    </div>
+
+    <div class="form-group">
+        <div class="input-group">
+    <label>Visa Form:</label>
+    <input type="file" name="doc" id="" class="form-control">
+    </div>
+    </div>
+
+    <div class="form-group">
+        <div class="input-group">
+    <button type="submit" class="btn btn-primary">Update</button>
+    </div>
+    </div>
+
+    </div>
+    </div>
+    </div>
+</div>
+
+</form>
+
+{%endblock%}

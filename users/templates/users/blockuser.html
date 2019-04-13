@@ -1,0 +1,11 @@
+{%extends 'admbase.html'%}
+{% block body %}
+<form method="post" action="{% url 'users:block' %}">
+    {% csrf_token %}
+    {%if error%}
+    <font style="color:red">{{error}}</font>
+    {%endif%}
+    Enter Staffid here:<input type="text" name="sid">
+    <button type="submit">Submit</button>
+</form>
+{%endblock%}

@@ -1,0 +1,94 @@
+{%extends 'base.html'%}
+<head>
+  <title>Emai Search</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <style type="text/css">
+
+</style>
+</head>
+<body>
+<form method="post" action="{% url 'users:pnrupdate' %}" >
+  {% csrf_token %}
+<div class="container-fluid">
+  <nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand">Logo</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+     <!-- <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Projects</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="bootnet.html" class="active">Register</a></li>
+        <li><a href="Dashboard.html" class="active">Dashboard</a></li>
+      </ul>-->
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="container-fluid" >
+  <div class="row content">
+    <div class="col-sm-3 sidenav ">
+      <div class="well" style="height: 550px">
+      <h2>Logo</h2>
+      <ul class="nav nav-pills nav-stacked">
+        <li class="active"><a href="#section1">HOME</a></li>
+        <li><a href="register.html">Register</a></li>
+        <li><a href="validation.html">validation</a></li>
+        <li><a href="reports.html">Reports Generation</a></li>
+        <li><a href="feedback.html">Feedback</a></li>
+        <li><a href="customer.html">customer support</a></li>
+      </ul><br>
+    </div>
+    </div>
+    <div class="col-lg-3">
+      <div class="well">
+              <h2>Search Student Details in batch wise</h2>
+    <label class="radio-inline">
+      <input type="radio" name="optradio" checked>Batch wise
+    </label>
+    <label class="radio-inline">
+      <input type="radio" name="optradio">Student wise
+    </label><br>
+    <div class="form-group">
+     <label>Passport Number
+      <input type="text" name="optradio">
+      </label><br>
+    </div>
+    <div class="form-group">
+     <label>PNR Number
+      <input type="text" name="optradio">
+    </label><br>
+  </div>
+    <input type="submit" name="sub" value="OK">   
+  </div>
+      
+    </div>
+  
+      <div class="col-lg-6">
+        <div class="well">
+
+""GMAIL""
+
+</div>
+</div> 
+ 
+</form>
+ </body>
+</html>
+
+
+

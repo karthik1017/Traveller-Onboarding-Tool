@@ -1,0 +1,184 @@
+{%extends 'base.html'%}
+{%block head%}
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<style type="text/css">
+input[type=text]{
+ width: 250px;
+
+
+}
+
+input[type=checkbox]{
+
+  -ms-transform: scale(2); /* IE */
+ -moz-transform: scale(2); /* FF */
+ -webkit-transform: scale(2); /* Safari and Chrome */
+ -o-transform: scale(2); /* Opera */
+  padding: 10px;
+}
+
+#t1{
+  border-top-width: 100px;
+
+}
+
+body{
+
+  background-image: url(); no-repeat;
+}
+
+    footer {
+      background-color: #555;
+      color: white;
+      padding: 15px;
+    }
+
+.row.content {height: 550px}
+
+@media screen and (max-width: 767px) {
+      .row.content {height: auto;}
+    }
+
+
+#comment1 , #comment2 , #comment{
+
+ width: 250px;
+
+}
+
+
+
+
+
+</style>
+
+
+{%endblock%}
+{%block body%}
+
+<form action="{% url 'users:register1' %}" method="post">
+    {% csrf_token %}
+
+    <div class="container-fluid">
+        <div class="row content">
+            <div class="col-lg-4">
+                <div class="well">
+                    {%if error%}
+                    <font style="color:red">{{error}}</font>
+                    {%endif%}
+
+                    <div class="form-group">
+                        <label>Batch Number</label>
+                        <input type="text" name="bnumber" required="" class="form-control">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Passport Number:</label>
+                        <input type="text" name="pno" class="form-control" required="" id=""
+                               placeholder="">
+                    </div>
+
+                    <div class="form-group">
+                        <label>First Name:</label>
+                        <input type="text" name="fname" required="" class="form-control">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Second Name:</label>
+                        <input type="text" name="sname" required="" class="form-control">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Date Of Birth:</label>
+                        <input type="date" name="dob" required="" class="form-control">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Gender:</label>
+                        <select name="gender" class="form-control">
+                            <option value="select">SELECT GENDER</option>
+                            <option value="male">MALE</option>
+                            <option value="female">FEMALE</option>
+                            <option value="trans">TRANSGENDER</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Father Name:</label>
+                        <input type="text" name="faname" required="" class="form-control">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Father Passport Number:</label>
+                        <input type="text" name="fpno" class="form-control" required="" id=""
+                               placeholder="">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Mother Name:</label>
+                        <input type="text" name="moname" class="form-control" required="">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Mother Passport Number:</label>
+                        <input type="text" name="mpno" class="form-control" required="" id=""
+                               placeholder="">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Place Of Birth:</label>
+                        <input type="text" name="pob" required="" class="form-control">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Email:</label>
+                        <input type="text" name="email" required="" class="form-control">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Phone Number:</label>
+                        <input type="text" name="pnumber" required="" class="form-control">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Paddress:</label>
+                        <textarea class="form-control" rows="3" id="comment1" name="padd"
+                                  required=""></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Raddress:</label>
+                        <textarea class="form-control" rows="3" id="comment2" name="radd"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Alternate Number:</label>
+                        <input type="text" name="anumber" required="" class="form-control">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Upload File:</label>
+                        <input type="file" name="file" required="" class="form-control"
+                               accept="image/x-png, image/gif, image/jpeg">
+                    </div>
+
+                    <div class="form-group">
+                        <input type="submit" name="" class="btn btn-primary" value="Register" height="4"
+                        >
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    </div>
+</form>
+
+{%endblock%}
+

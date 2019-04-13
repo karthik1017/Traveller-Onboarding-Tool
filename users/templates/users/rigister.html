@@ -1,0 +1,14 @@
+<html>
+<body>
+<form action="{% url 'users:userregister' %}" method="post">
+    {% csrf_token %}
+    phone number:
+    <input type="text" name="number" id=""><br><br>
+    <button type="submit">Submit</button>
+    <!--<script>-->
+        <!--alert('{{message}}');-->
+    <!--</script>-->
+</form>
+
+</body>
+</html>

@@ -1,0 +1,12 @@
+{%extends 'base.html'%}
+<head>
+    <meta charset="UTF-8">
+    <title>FEED BACK</title>
+</head>
+{%block body%}
+<form action="{% url 'users:feedbackview' %}">
+    <table>
+        <h1>FEEDBACK HERE</h1>
+    </table>
+</form>
+{%endblock%}

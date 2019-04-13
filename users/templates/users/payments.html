@@ -1,0 +1,90 @@
+{%extends 'base.html'%}
+{%block head%}
+<title>Registration Page</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<style type="text/css">
+  input[type=text]{
+ 
+ width: 250px;
+
+
+}
+
+input[type=checkbox]{
+
+  -ms-transform: scale(2); /* IE */
+ -moz-transform: scale(2); /* FF */
+ -webkit-transform: scale(2); /* Safari and Chrome */
+ -o-transform: scale(2); /* Opera */
+  padding: 10px;
+}
+
+#t1{
+  border-top-width: 100px;
+   
+}
+
+body{
+
+  background-image: url(); no-repeat;
+}
+
+  
+
+
+
+
+}
+
+</style>
+{%endblock%}
+{%block body%}
+<form class="hello" method="post" action="{% url 'users:payments' %}">
+    {% csrf_token %}
+    <div class="container-fluid">
+        <div class="col-lg-5">
+            <div class="well">
+                <table width="400px" class="container-fluid" id="t1">
+                    <tr style="height: 60px">
+                        <td align="center">Passport Number:</td>
+                        <td><input type="text" name="pkey" required="" id="key" placeholder=""></td>
+                    </tr>
+                    <tr style="height: 60px">
+                        <td align="center">Cheque Number:</td>
+                        <td><input type="text" name="cheque" required="" class="chequen"></td>
+                    </tr>
+                    <tr style="height: 60px">
+                        <td align="center">Bank Name:</td>
+                        <td><input type="text" name="bname" required="" class="bank"></td>
+                    </tr>
+                    <tr style="height: 60px">
+                        <td align="center">Branch Name:</td>
+                        <td><input type="text" name="Bname" required="" class="t4"></td>
+                    </tr>
+                    <tr style="height: 60px">
+                        <td align="center">Amount:</td>
+                        <td><input type="text" name="amt" required="" class="t4"></td>
+                    </tr>
+                    <tr style="height: 60px">
+                        <td align="center">Due Date:</td>
+                        <td><input type="date" name="date" required="" class="t4"></td>
+                    </tr>
+
+                    <tr style="height: 54px">
+                        <td align="center"></td>
+                        <td align="center">
+                            <input type="submit" name="" class="btn btn-primary" value="Submit" height="4" class="b1">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    </div>
+</form>
+{%endblock%}

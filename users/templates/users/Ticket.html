@@ -1,0 +1,65 @@
+{%extends 'base.html'%}
+<head>
+  <title>Registration Page</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+<style type="text/css">
+  input[type=text]{
+ 
+ width: 250px;
+
+
+}
+
+
+#t1{
+  border-top-width: 100px;
+   
+}
+
+
+  
+.row.content {height: 550px}
+
+@media screen and (max-width: 767px) {
+      .row.content {height: auto;} 
+    }
+
+</style>
+</head>
+{%block body%}
+<form action="{% url 'users:pnrupdate' %}" method="post">
+{% csrf_token %}
+<div class="container-fluid" >
+  <div class="row content">
+        <div class="col-lg-5">
+      <div class="well">
+      <table width="400px" class="container-fluid" id="t1">
+     <tr style="height: 60px"> 
+      <td align="center" >Passport Number: </td>
+        <td><input type="text" name="pkey" required="" id="key"  placeholder="" ></td>
+     </tr>
+     <tr style="height: 60px"> 
+      <td align="center">PNR Number: </td>
+        <td><input type="text"  name="cheque" required="" class="chequen" ></td>
+     </tr>
+     <tr style="height: 60px">  
+      <td align="center">Ticket Number: </td>
+        <td><input type="text" name="bname" required="" class="bank" ></td>
+     </tr>
+     </table>
+        <div class="button"> 
+          <input type="submit" name="" class="btn btn-primary" value="Submit" height="4">
+          <input type="reset" name="" class="btn btn-primary" value="Reset" height="4" >
+        </div>
+    </div>
+    </div>
+    </div>
+  </div>
+</form>
+{%endblock%}
+

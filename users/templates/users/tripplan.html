@@ -1,0 +1,107 @@
+{%extends 'base.html'%}
+{%block head%}
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<style type="text/css">
+input[type=text]{
+ width: 250px;
+
+
+}
+
+input[type=checkbox]{
+
+  -ms-transform: scale(2); /* IE */
+ -moz-transform: scale(2); /* FF */
+ -webkit-transform: scale(2); /* Safari and Chrome */
+ -o-transform: scale(2); /* Opera */
+  padding: 10px;
+}
+
+#t1{
+  border-top-width: 100px;
+
+}
+
+body{
+
+  background-image: url(); no-repeat;
+}
+
+    footer {
+      background-color: #555;
+      color: white;
+      padding: 15px;
+    }
+
+.row.content {height: 550px}
+
+@media screen and (max-width: 767px) {
+      .row.content {height: auto;}
+    }
+
+
+#comment1 , #comment2 , #comment{
+
+ width: 250px;
+
+}
+
+
+
+
+</style>
+
+
+{%endblock%}
+{%block body%}
+
+<form action="{% url 'users:tripplan' %}" method="post">
+    {% csrf_token %}
+
+    <div class="container-fluid">
+            <div class="row content">
+                <div class="col-lg-4">
+                    <div class="well">
+
+                        <div class="form-group">
+                                <label>Tripid</label>
+                                <input type="text" name="tid" required="" class="form-control">
+                            </div>
+
+                            <div class="form-group">
+                                <label>batch</label>
+                                <input type="text" name="batch" class="form-control" required="" id=""
+                                           placeholder="">
+                            </div>
+
+                            <div class="form-group">
+                                <label>Designation</label>
+                                <input type="text"  name="designation" required="" class="form-control">
+                            </div>
+
+                            <div class="form-group">
+                                <label>Year</label>
+                                <input type="text"  name="year" required="" class="form-control">
+                            </div>
+                        <div class="form-group">
+
+                                <input type="submit"  required="" class="form-control">
+                            </div>
+
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</form>
+
+{%endblock%}
+
